@@ -10,7 +10,7 @@ public abstract class BaseEventBus : IEventBus
     public readonly IServiceProvider _serviceProvider;
     public readonly IEventBusSubscriptionManager _subscriptionManager;
 
-    private EventBusConfig _eventBusConfig;
+    public EventBusConfig _eventBusConfig { get; set; }
 
     protected BaseEventBus(EventBusConfig eventBusConfig, IServiceProvider serviceProvider)
     {
@@ -42,6 +42,7 @@ public abstract class BaseEventBus : IEventBus
     public virtual void Dispose()
     {
         _eventBusConfig = null;
+        _subscriptionManager.Clear();
     }
 
     public async Task<bool> ProcessEvent(string eventName, string message)

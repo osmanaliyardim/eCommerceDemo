@@ -30,7 +30,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBus.Factory", "src\Bui
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBus.AzureServiceBus", "src\BuildingBlocks\EventBus\EventBus.AzureServiceBus\EventBus.AzureServiceBus.csproj", "{B771927E-3B9C-4556-B5B0-B8CC035B62D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventBus.RabbitMQ", "src\BuildingBlocks\EventBus\EventBus.RabbitMQ\EventBus.RabbitMQ.csproj", "{A2DBB7E1-C6C1-4BD4-87EF-F6443810FDB9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBus.RabbitMQ", "src\BuildingBlocks\EventBus\EventBus.RabbitMQ\EventBus.RabbitMQ.csproj", "{A2DBB7E1-C6C1-4BD4-87EF-F6443810FDB9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp", "src\Clients\BlazorWebApp\WebApp\WebApp.csproj", "{6B21A3A6-62D9-4D75-84EC-8002D2844253}"
 EndProject
@@ -65,6 +65,12 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatalogService.Api", "src\Services\CatalogService\CatalogService.Api\CatalogService.Api.csproj", "{66C90912-8033-442D-8124-0E3E3C156371}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasketService.Api", "src\Services\BasketService\BasketService.Api\BasketService.Api.csproj", "{5C6CD4AA-D591-4C36-AFA1-AD4B6CC10B7E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{9FD3FB85-0AF4-449A-9278-31A946A23F4E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingBlocks", "{4DEEFCC4-5A05-4B94-A803-5D85EEAD687D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventBus.UnitTest", "tests\BuildingBlocks\EventBus.UnitTest\EventBus.UnitTest.csproj", "{641A42AD-595B-48A5-B9B7-0FE1273E4DD5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -132,6 +138,10 @@ Global
 		{5C6CD4AA-D591-4C36-AFA1-AD4B6CC10B7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C6CD4AA-D591-4C36-AFA1-AD4B6CC10B7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C6CD4AA-D591-4C36-AFA1-AD4B6CC10B7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{641A42AD-595B-48A5-B9B7-0FE1273E4DD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{641A42AD-595B-48A5-B9B7-0FE1273E4DD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{641A42AD-595B-48A5-B9B7-0FE1273E4DD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{641A42AD-595B-48A5-B9B7-0FE1273E4DD5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -165,6 +175,8 @@ Global
 		{7B6884A6-2FEE-4E73-BD93-D8D57635161C} = {4478A60F-1AE0-4657-A460-997AB5F7ECDD}
 		{66C90912-8033-442D-8124-0E3E3C156371} = {62530B2C-1AA3-418D-8250-621E95A5D0BC}
 		{5C6CD4AA-D591-4C36-AFA1-AD4B6CC10B7E} = {7B6884A6-2FEE-4E73-BD93-D8D57635161C}
+		{4DEEFCC4-5A05-4B94-A803-5D85EEAD687D} = {9FD3FB85-0AF4-449A-9278-31A946A23F4E}
+		{641A42AD-595B-48A5-B9B7-0FE1273E4DD5} = {4DEEFCC4-5A05-4B94-A803-5D85EEAD687D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {66175744-4D7E-445D-8872-34AF2F08C96B}

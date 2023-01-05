@@ -71,6 +71,10 @@ public class EventBusRabbitMQ : BaseEventBus
                 autoDelete: false,
                 arguments: null);
 
+            consumerChannel.QueueBind(queue: GetSubName(eventName),
+                    exchange: _eventBusConfig.DefaultTopicName,
+                    routingKey: eventName);
+
             consumerChannel.BasicPublish(
                 exchange: _eventBusConfig.DefaultTopicName,
                 routingKey: eventName,

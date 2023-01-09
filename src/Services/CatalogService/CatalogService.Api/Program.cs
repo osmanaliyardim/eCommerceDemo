@@ -13,6 +13,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.Configure<CatalogSettings>(configuration.GetSection("CatalogSettings"));
 builder.Services.ConfigureDbContext(configuration); // needs further configs
 
+builder.Services.ConfigureConsul(configuration);
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -27,5 +29,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.RegisterWithConsul();
 
 app.Run();

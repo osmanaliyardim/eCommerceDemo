@@ -1,4 +1,14 @@
+using Ocelot.DependencyInjection;
+using Ocelot.Middleware;
+using Ocelot.Provider.Consul;
+
 var builder = WebApplication.CreateBuilder(args);
+
+IConfiguration configuration = new ConfigurationBuilder()
+                            .AddJsonFile("ocelot.json")
+                            .Build();
+
+builder.Services.AddOcelot(configuration).AddConsul();
 
 // Add services to the container.
 
@@ -21,5 +31,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseOcelot();
 
 app.Run();

@@ -26,7 +26,7 @@ public abstract class BaseEntity
         domainEvents?.Remove(eventItem);
     }
 
-    public void ClearDomainEvent()
+    public void ClearDomainEvents()
     {
         domainEvents?.Clear();
     }
